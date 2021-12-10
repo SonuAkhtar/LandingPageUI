@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    124deg,
+    rgba(74, 74, 91, 1) 34%,
+    rgba(14, 56, 65, 1) 100%
+  );
+  color: #fff;
+  padding: 1rem 5rem;
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0 2rem 0;
+}
+
+.navbarLeft ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarLeft ul li {
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #ccc9c9;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.navbarLeft ul li:hover {
+  font-weight: 500;
+  transform: translateY(-3px) scale(1.1);
+  color: #f5571e;
+}
+
+.navbarLeft ul li::selection {
+  background: #f06a3a;
+  color: #fff;
+}
+
+.navbarRight {
+  display: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background: #454545;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 2;
+  box-shadow: 0 1px 40px #d67e5e;
+}
+
+#burgerIcon,
+#closeIcon {
+  display: none;
+}
+
+#burgerIcon.activeMenu,
+#closeIcon.activeMenu {
+  display: block;
+}
+
+.hr {
+  height: 1px;
+  width: 100%;
+  background: #5e5b5b;
+}
+
+.mainBody {
+  margin-top: 4rem;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.bodyLeft {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bodyLeftTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  width: 50%;
+}
+
+.description {
+  font-weight: 200;
+  color: #aca6a6;
+}
+
+.description::selection {
+  background: #f06a3a;
+  color: #fff;
+}
+
+.bodyLeftBottom {
+  height: 250px;
+  width: 95%;
+  background: linear-gradient(
+    153deg,
+    rgba(72, 72, 74, 1) 34%,
+    rgba(14, 56, 65, 1) 100%
+  );
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 15px rgba(255, 255, 255, 0.1);
+}
+
+.bodyLeftBottom ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+.bodyLeftBottom ul li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.bodyLeftBottom ul li input {
+  border: none;
+  border-bottom: 1px solid #5a5555;
+  outline: none;
+  width: 200%;
+  background: transparent;
+  caret-color: #fff;
+  color: #e5e5e5;
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.bodyLeftBottom ul li input:focus {
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.bodyLeftBottom ul li input:focus::placeholder {
+  color: #d4d4d4;
+}
+
+.bodyLeftBottom .searchIcon {
+  height: 100%;
+  width: 4.5rem;
+  background: #d65f34;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: -30px 0px 80px -20px #d65f34;
+}
+
+.searchIcon:hover {
+  background: #f06a3a;
+}
+
+.bodyRight {
+  width: 100%;
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+}
+
+.bodyRight .imageBox {
+  position: relative;
+  height: 95%;
+  width: 100%;
+  display: flex;
+  transition: 0.5s ease all;
+}
+
+.imageBox img {
+  height: 100%;
+  width: 60%;
+  margin: 0 20%;
+  object-fit: cover;
+  border-radius: 1rem;
+  opacity: 0.9;
+  transition: 0.4s ease-in-out;
+}
+
+.imageBox img:hover {
+  opacity: 1;
+  transform: scale(1.025);
+}
+
+.imageIcon {
+  position: absolute;
+  bottom: 6%;
+  right: 20%;
+  background: #333;
+  color: #d65f34;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #454545;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.imageIcon:hover {
+  transform: translateY(5px);
+  color: #f06a3a;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  cursor: pointer;
+  color: gray;
+  transition: 0.2s ease-in-out all;
+  z-index: 2;
+}
+
+.arrow:hover {
+  color: lightgray;
+}
+
+.leftArrow {
+  left: 6rem;
+}
+
+.rightArrow {
+  right: 6rem;
+}
+
+/*Media Query*/
+
+@media screen and (max-width: 420px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+      124deg,
+      rgba(74, 74, 91, 1) 34%,
+      rgba(14, 56, 65, 1) 100%
+    );
+    margin: 0;
+    transition: all 0.5s ease;
+  }
+
+  .navbar.inActive {
+    left: -100vw;
+  }
+
+  .navbarLeft ul {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+
+  .navbarLeft ul li {
+    margin: 0 0.3rem;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .navbarLeft ul li:hover {
+    font-size: 2.2rem;
+  }
+
+  .hr {
+    display: none;
+  }
+
+  .navbarRight {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainBody {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+
+  .container {
+    padding: 1rem 1.5rem;
+    height: 100%;
+  }
+
+  .heading {
+    width: 60%;
+  }
+
+  .bodyLeftBottom {
+    height: 300px;
+    width: 100%;
+  }
+
+  .bodyLeftBottom ul li {
+    margin: 1rem 0;
+  }
+
+  .bodyLeftBottom ul li input {
+    width: 100%;
+  }
+
+  .bodyRight {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageContainer {
+    border-radius: 1rem;
+    width: 96%;
+    margin: 0 2%;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .leftArrow {
+    left: 0;
+  }
+
+  .rightArrow {
+    right: 0;
+  }
+
+  .bodyRight .imageBox {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .bodyRight .imageBox img {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+
+  .imageIcon {
+    bottom: 2%;
+    right: 10%;
+  }
+}

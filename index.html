@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar inActive" id="pageNavbar">
+        <div class="navbarLeft">
+          <ul>
+            <li>Home</li>
+            <li>Contacts</li>
+            <li>Projects</li>
+            <li>Ideas</li>
+            <li>Team</li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbarRight" id="menuBtn">
+        <i class="fas fa-bars activeMenu" id="burgerIcon"></i>
+        <i class="fas fa-times" id="closeIcon"></i>
+      </div>
+      <div class="hr"></div>
+      <div class="mainBody">
+        <div class="bodyLeft">
+          <div class="bodyLeftTop">
+            <div class="heading">
+              Buy, Sell, Rent.
+            </div>
+            <div class="description">
+              Your search for a good house ends here.
+            </div>
+          </div>
+          <div class="bodyLeftBottom">
+            <ul>
+              <li>
+                Location
+                <input type="text" placeholder="e.g. Delhi, Noida..." />
+              </li>
+              <li>
+                Type
+                <input type="text" placeholder="Villa, Suite..." />
+              </li>
+              <li>
+                Price Range
+                <input type="text" placeholder="2cr-5cr" />
+              </li>
+            </ul>
+            <div class="searchIcon">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+        </div>
+        <div class="bodyRight">
+          <div class="arrow leftArrow" id="leftArrow">
+            <i class="fas fa-arrow-circle-left"></i>
+          </div>
+          <div class="imageContainer">
+            <div class="imageBox" id="image_box">
+              <img
+                src="https://a3w3j4i7.stackpathcdn.com/wp-content/uploads/2013/12/Hoke-residence-house-in-the-forest-8-Medium.jpg"
+                alt="img1"
+              />
+
+              <img
+                src="https://bestphotosfromweb.files.wordpress.com/2015/04/amazing-house-photos-7.jpg"
+                alt="img2"
+              />
+
+              <img
+                src="https://cdn.jhmrad.com/wp-content/uploads/design-architectural-house-designs-ideas-amazing-dream-homes_75353.jpg"
+                alt="img3"
+              />
+
+              <img src="https://i.imgur.com/1fOq0pJ.jpg" alt="img4" />
+            </div>
+          </div>
+
+          <div class="imageIcon"><i class="fas fa-arrow-down"></i></div>
+
+          <div class="arrow rightArrow" id="rightArrow">
+            <i class="fas fa-arrow-circle-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
